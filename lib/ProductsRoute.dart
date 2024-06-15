@@ -10,18 +10,18 @@ class ProductsRoute extends StatefulWidget {
 
 class _ProductsRouteState extends State<ProductsRoute> {
   var MyItems=[
-    {'name':'perfume' , 'image' : 'images/d.jpg' , 'price': '50' , 'stock' : '500'},
-    {'name':'sandals' , 'image' : 'images/c.jpg' , 'price': '10', 'stock' : '100'},
-    {'name':'watch' , 'image' : 'images/b.jpg' , 'price': '100', 'stock' : '1000'},
-    {'name':'t-shirt' , 'image' : 'images/a.jpg' , 'price': '8', 'stock' : '800'},
-    {'name':'perfume' , 'image' : 'images/d.jpg' , 'price': '50' , 'stock' : '500'},
-    {'name':'sandals' , 'image' : 'images/c.jpg' , 'price': '10', 'stock' : '100'},
-    {'name':'watch' , 'image' : 'images/b.jpg' , 'price': '100', 'stock' : '1000'},
-    {'name':'t-shirt' , 'image' : 'images/a.jpg' , 'price': '8', 'stock' : '800'},
-    {'name':'perfume' , 'image' : 'images/d.jpg' , 'price': '50' , 'stock' : '500'},
-    {'name':'sandals' , 'image' : 'images/c.jpg' , 'price': '10', 'stock' : '100'},
-    {'name':'watch' , 'image' : 'images/b.jpg' , 'price': '100', 'stock' : '1000'},
-    {'name':'t-shirt' , 'image' : 'images/a.jpg' , 'price': '8', 'stock' : '800'},
+    {'name':'Perfume' , 'image' : 'images/d.jpg' , 'price': '50' , 'stock' : '500'},
+    {'name':'Sandals' , 'image' : 'images/c.jpg' , 'price': '10', 'stock' : '100'},
+    {'name':'Watch' , 'image' : 'images/b.jpg' , 'price': '100', 'stock' : '1000'},
+    {'name':'T-shirt' , 'image' : 'images/a.jpg' , 'price': '8', 'stock' : '800'},
+    {'name':'Perfume' , 'image' : 'images/d.jpg' , 'price': '50' , 'stock' : '500'},
+    {'name':'Sandals' , 'image' : 'images/c.jpg' , 'price': '10', 'stock' : '100'},
+    {'name':'Watch' , 'image' : 'images/b.jpg' , 'price': '100', 'stock' : '1000'},
+    {'name':'T-shirt' , 'image' : 'images/a.jpg' , 'price': '8', 'stock' : '800'},
+    {'name':'Perfume' , 'image' : 'images/d.jpg' , 'price': '50' , 'stock' : '500'},
+    {'name':'Sandals' , 'image' : 'images/c.jpg' , 'price': '10', 'stock' : '100'},
+    {'name':'Watch' , 'image' : 'images/b.jpg' , 'price': '100', 'stock' : '1000'},
+    {'name':'T-shirt' , 'image' : 'images/a.jpg' , 'price': '8', 'stock' : '800'},
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,10 +32,14 @@ class _ProductsRouteState extends State<ProductsRoute> {
       ),
 
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
-        // leading: const Icon(Icons.flutter_dash_sharp, color: Colors.black, size: 32,),
+        iconTheme: const IconThemeData(color: Colors.black),
+        leading: const Icon(Icons.flutter_dash_sharp, color: Colors.black, size: 32,),
         actions: [IconButton(onPressed: (){Navigator.pushReplacementNamed(context, '/login');}, icon: Icon(Icons.logout) )],
         title: const Text('Products',style: TextStyle(color: Colors.black),),),
+
+
+          //drawer
+
       drawer: Drawer(
         child: ListView(
           children: [
@@ -46,6 +50,10 @@ class _ProductsRouteState extends State<ProductsRoute> {
           ],
         ),
       ),
+
+
+
+
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 4),
         itemCount: MyItems.length,
