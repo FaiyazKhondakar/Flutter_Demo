@@ -75,7 +75,7 @@ class _CalculateState extends State<Calculate> {
                       child: ElevatedButton(onPressed: (){
                         if(_forKey.currentState!.validate()){
                           double numOne = double.tryParse(_numOneTEController.text.trim()) ?? 0;
-                          double numTwo = double.tryParse(_numOneTEController.text.trim()) ?? 0;
+                          double numTwo = double.tryParse(_numTwoTEController.text.trim()) ?? 0;
                           double result = add(numOne, numTwo);
                           _result =result;
                           setState(() {});
@@ -88,7 +88,7 @@ class _CalculateState extends State<Calculate> {
                       child: ElevatedButton(onPressed: (){
                         if(_forKey.currentState!.validate()){
                           double numOne = double.tryParse(_numOneTEController.text.trim()) ?? 0;
-                          double numTwo = double.tryParse(_numOneTEController.text.trim()) ?? 0;
+                          double numTwo = double.tryParse(_numTwoTEController.text.trim()) ?? 0;
                           double result = sub(numOne, numTwo);
                           _result =result;
                           setState(() {});

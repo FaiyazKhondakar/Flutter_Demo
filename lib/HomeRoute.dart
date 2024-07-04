@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:module_6/calculate.dart';
+import 'package:module_6/water_conscume.dart';
 
 class HomeRoute extends StatefulWidget {
   const HomeRoute({super.key});
@@ -42,7 +43,7 @@ class _HomeRouteState extends State<HomeRoute> with SingleTickerProviderStateMix
           // unselectedLabelColor: Colors.grey,
           // indicatorWeight: 5,
           tabs: const [
-            Tab(icon: Icon(Icons.feed),text: 'feed',),
+            Tab(icon: Icon(Icons.water_drop),text: 'Water Consume',),
             Tab(icon: Icon(Icons.person),text: 'profile'),
             Tab(icon: Icon(Icons.calculate),text: 'Calculate'),
             Tab(icon: Icon(Icons.shopping_cart),text: 'cart'),
@@ -51,7 +52,7 @@ class _HomeRouteState extends State<HomeRoute> with SingleTickerProviderStateMix
       body: TabBarView(
           controller: _tabController,
           children: const [
-            Center(child: Text('Feed')),
+            Center(child: WaterConsume()),
             Center(child: Text('Profile')),
             Center(child: Calculate(),),
             Center(child: Text('Cart')),
